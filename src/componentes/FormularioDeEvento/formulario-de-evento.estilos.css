@@ -6,3 +6,12 @@
   max-width: 80%;
   margin: 44px auto;
 }
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.acoes {
+    margin-top: 30px;
+    text-align: center;
+}

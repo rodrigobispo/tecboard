@@ -3,6 +3,8 @@ import { TituloFormulario } from '../TituloFormulario/index';
 import { CampoDeFormulario } from '../CampoDeFormulario/index';
 import { Label } from '../Label/index';
 import { CampoDeEntrada } from '../CampoDeEntrada/index';
+import { ComboBox } from '../ComboBox/index';
+import { Botao } from '../Botao/index';
 
 export function FormularioDeEvento() {
     return (
@@ -10,15 +12,40 @@ export function FormularioDeEvento() {
           <TituloFormulario>
             Preencha para criar um evento:
           </TituloFormulario>
-          <CampoDeFormulario>
-            <Label htmlFor="nome">Qual é o nome do evento?</Label>
-            <CampoDeEntrada
-              type="text"
-              id='nome'
-              placeholder='Summer dev hits'
-              name='nomeEvento'
-            />
-          </CampoDeFormulario>
+          <div className='campos'>
+            <CampoDeFormulario>
+              <Label htmlFor="nome">
+                Qual é o nome do evento?
+              </Label>
+              <CampoDeEntrada
+                type="text"
+                id='nome'
+                placeholder='Summer dev hits'
+                name='nomeEvento'
+              />
+            </CampoDeFormulario>
+            <CampoDeFormulario>
+              <Label htmlFor="dataEvento">
+                Data do evento
+              </Label>
+              <CampoDeEntrada
+                type="date"
+                id='dataEvento'
+                name='dataEvento'
+              />
+            </CampoDeFormulario>
+            <CampoDeFormulario>
+              <Label htmlFor="temasEventos">
+                Tema do evento
+              </Label>
+              <ComboBox />
+            </CampoDeFormulario>
+          </div>
+          <div className='acoes'>
+            <Botao>
+              Criar evento
+            </Botao>
+          </div>
         </form>
     )
 }

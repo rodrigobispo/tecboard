@@ -1,6 +1,8 @@
-export function Label({ children }) {
+import './label.estilos.css'
+
+export function Label({ children, htmlFor }) {
   return (
-    <label>
+    <label htmlFor={htmlFor} className='label'>
       {children}
     </label>
   )
