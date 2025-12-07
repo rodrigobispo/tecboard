@@ -1,8 +1,8 @@
 import './combo-formulario.estilos.css'
 
-export function ComboBox() {
+export function ComboBox(props) {
   return (
-    <select className='combobox-form'>
+    <select {...props} className='combobox-form'>
       <option value=""></option>
     </select>
   )

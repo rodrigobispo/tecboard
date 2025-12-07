@@ -38,7 +38,10 @@ export function FormularioDeEvento() {
               <Label htmlFor="temasEventos">
                 Tema do evento
               </Label>
-              <ComboBox />
+              <ComboBox
+                id="temasEventos"
+                name="temasEventos"
+              />
             </CampoDeFormulario>
           </div>
           <div className='acoes'>
