@@ -6,7 +6,7 @@ import { CampoDeEntrada } from '../CampoDeEntrada/index';
 import { ComboBox } from '../ComboBox/index';
 import { Botao } from '../Botao/index';
 
-export function FormularioDeEvento() {
+export function FormularioDeEvento({ temas }) {
     return (
         <form className='form-evento'>
           <TituloFormulario>
@@ -25,6 +25,17 @@ export function FormularioDeEvento() {
               />
             </CampoDeFormulario>
             <CampoDeFormulario>
+              <Label htmlFor="capa">
+                Qual o endereço da imagem da capa?
+              </Label>
+              <CampoDeEntrada
+                type="text"
+                id='capa'
+                placeholder='http://...'
+                name='capa'
+              />
+            </CampoDeFormulario>
+            <CampoDeFormulario>
               <Label htmlFor="dataEvento">
                 Data do evento
               </Label>
@@ -38,10 +49,7 @@ export function FormularioDeEvento() {
               <Label htmlFor="temasEventos">
                 Tema do evento
               </Label>
-              <ComboBox
-                id="temasEventos"
-                name="temasEventos"
-              />
+              <ComboBox id="temasEventos" name="temasEventos" itens={temas} />
             </CampoDeFormulario>
           </div>
           <div className='acoes'>
