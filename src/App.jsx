@@ -1,4 +1,5 @@
 import './App.css'
+import { Banner } from './componentes/Banner'
 import { FormularioDeEvento } from './componentes/FormularioDeEvento'
 import { Tema } from './componentes/Tema'
 
@@ -34,11 +35,9 @@ function App() {
   return (
     <main>
         <header>
-            <img src="/logo.png" alt="" />
+          <img src="/logo.png" alt="" />
         </header>
-        <section>
-            <img src="/banner.png" alt="" />
-        </section>
+        <Banner />
         <FormularioDeEvento />
         <section>
           <Tema tema={temas[0]} />
