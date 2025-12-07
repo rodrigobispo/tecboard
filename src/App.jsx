@@ -35,7 +35,7 @@ function App() {
 
   const eventos = [
     {
-      capa: 'http://...',
+      capa: '/img/imagem_1.png',
       tema: temas[0],
       data: new Date(),
       titulo: 'Mulheres no Front'
